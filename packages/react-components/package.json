@@ -1,0 +1,9 @@
+{
+  "name": "global-design-system-react-components",
+  "version": "0.0.1",
+  "description": "React components built off of the Global Design System core",
+  "main": "index.js",
+  "repository": "https://github.com/codydwyer/global-design-system.git",
+  "author": "Cody Dwyer <codydwyer@gmail.com>",
+  "license": "MIT"
+}
