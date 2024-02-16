@@ -1,0 +1,11 @@
+{
+  "name": "global-design-system",
+  "version": "0.0.1",
+  "repository": "https://github.com/codydwyer/global-design-system.git",
+  "author": "Cody Dwyer <codydwyer@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ]
+}

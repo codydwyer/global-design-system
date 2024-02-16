@@ -1,0 +1,9 @@
+{
+  "name": "global-design-system-core",
+  "version": "0.0.1",
+  "description": "The core package of the Global Design System",
+  "main": "index.js",
+  "repository": "https://github.com/codydwyer/global-design-system.git",
+  "author": "Cody Dwyer <codydwyer@gmail.com>",
+  "license": "MIT"
+}
