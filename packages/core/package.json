@@ -1,5 +1,5 @@
 {
-  "name": "global-design-system-core",
+  "name": "@global-design-system/core",
   "version": "0.0.1",
   "description": "The core package of the Global Design System",
   "main": "index.js",

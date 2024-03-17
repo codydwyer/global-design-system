@@ -1,5 +1,5 @@
 {
-  "name": "global-design-system-vanilla-js",
+  "name": "@global-design-system/vanilla-js",
   "version": "0.0.1",
   "description": "Vanilla JS components built off of the Global Design System core",
   "main": "index.js",
