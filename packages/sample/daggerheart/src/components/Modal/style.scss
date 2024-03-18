@@ -1,2 +1,7 @@
 .modal {
+  display: none;
+
+  &.showing {
+    display: block;
+  }
 }
