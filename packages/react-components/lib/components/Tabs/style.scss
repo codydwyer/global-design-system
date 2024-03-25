@@ -1,0 +1,35 @@
+.tabs {
+  width: 100%;
+  padding-top: 6px;
+  padding-left: 6px;
+  box-shadow: inset 0px 0px 24px rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid #bbb;
+
+  .tab {
+    display: inline-block;
+    padding: 6px 12px;
+    background: none;
+    border-radius: none;
+    border: none;
+    box-sizing: border-box;
+    background: #eee;
+    position: relative;
+    border-right: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    border-top: 1px solid #bbb;
+    top: 1px;
+
+    &:first-child {
+      border-left: 1px solid #bbb;
+    }
+
+    &:hover {
+      background: #f8f8f8;
+    }
+
+    &.active {
+      background: #f8f8f8;
+      border-bottom: 1px solid #f8f8f8;
+    }
+  }
+}

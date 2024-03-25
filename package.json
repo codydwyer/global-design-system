@@ -1,5 +1,6 @@
 {
   "name": "global-design-system",
+  "private": true,
   "version": "0.0.1",
   "repository": "https://github.com/codydwyer/global-design-system.git",
   "author": "Cody Dwyer <codydwyer@gmail.com>",

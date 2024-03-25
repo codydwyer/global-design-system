@@ -1,0 +1,42 @@
+.toggle {
+  color: #fff;
+
+  button {
+    border-radius: 1em;
+    height: 10px;
+    width: 28px;
+    padding: 0px;
+    border: none;
+    position: relative;
+    top: 9px;
+
+    &.on {
+      text-align: right;
+      background: #00ada4;
+      .toggle-node {
+        background: #14fff3;
+      }
+    }
+
+    &.off {
+      text-align: left;
+      background: #bbb;
+      .toggle-node {
+        background: #fff;
+      }
+    }
+
+    .toggle-node {
+      height: 16px;
+      width: 16px;
+      border-radius: 8px;
+      box-shadow:
+        0,
+        0,
+        3px rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      position: relative;
+      bottom: 3px;
+    }
+  }
+}

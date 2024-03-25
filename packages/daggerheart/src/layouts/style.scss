@@ -1,0 +1,33 @@
+.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    flex-grow: 1;
+
+    .content {
+      height: 100%;
+    }
+  }
+}
+
+.theme-dark {
+  .main-menu {
+    background: #222;
+  }
+}
+
+.theme-light {
+  .main-menu {
+    background: #222;
+  }
+}
+
+.main-menu {
+  .theme-switcher {
+    position: absolute;
+    right: 12px;
+    top: 3px;
+  }
+}
