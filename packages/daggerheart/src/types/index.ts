@@ -1,8 +1,10 @@
 export type { IAncestry } from './ancestry';
-export type { IBackground } from './background';
 export type { ICharacter } from './character';
-export type { IClass } from './class';
+export type { IClass, IBuiltClass, IThresholds } from './class';
+export type { ICommunity } from './community';
 export type { IDomain, IDomainCard } from './domain';
+export type { IExperience } from './experience';
 export type { IFeature } from './feature';
+export type { IArmor, IWeapon, ILoot } from './item';
 export type { ISubclass } from './subclass';
-export type { TTrait } from './trait';
+export type { TTrait, TTraits } from './trait';

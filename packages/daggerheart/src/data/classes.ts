@@ -1,12 +1,7 @@
-import { IClass, IDomain, ISubclass } from '../types';
+import { IClass, IBuiltClass } from '../types';
 import { ensure } from './utils';
 import { getDomains } from './domains';
 import { getSubclasses } from './subclasses';
-
-export interface IBuiltClass extends IClass {
-  domains: IDomain[];
-  subclasses: ISubclass[];
-}
 
 const classes: IClass[] = [
   {
@@ -20,6 +15,14 @@ const classes: IClass[] = [
       major: 8,
       severe: 13,
     },
+    suggestedTraits: {
+      agility: 0,
+      strength: -1,
+      finesse: 1,
+      instinct: 0,
+      presence: 2,
+      knowledge: 1,
+    },
     items: ['Romance Novel', 'Letter Never Opened'],
     features: [
       {
@@ -28,6 +31,16 @@ const classes: IClass[] = [
           <p>If your Rally die hasn’t finished this countdown by the end of a session, distribute the current value shown on the die as Hope amongst your party, splitting it any way you choose, and remove the die.</p>
           <p>The Rally die you distribute increases to 1d8 at Level 5.</p>`,
       },
+    ],
+    backgroundQuestions: [
+      `Who from your community taught you to have such confidence in yourself?`,
+      `You were in love once. Who was it with, and how did they hurt you?`,
+      `You’ve always looked up to another Bard. Who are they and why do you idolize them?`,
+    ],
+    connectionQuestions: [
+      `What made you realize we were going to be such good friends?`,
+      `What do I do that annoys you?`,
+      `Why do you grab my hand at night?`,
     ],
   },
   {
@@ -41,6 +54,14 @@ const classes: IClass[] = [
       major: 9,
       severe: 14,
     },
+    suggestedTraits: {
+      agility: 1,
+      strength: 0,
+      finesse: 1,
+      instinct: 2,
+      presence: -1,
+      knowledge: 0,
+    },
     items: ['Small Bag of Rocks & Bones', 'Strange Pendant Found in the Dirt'],
     features: [
       {
@@ -51,6 +72,16 @@ const classes: IClass[] = [
         name: 'Beastform',
         description: `<p>Also take the Beastform sheet (available on page here). Mark a Stress to transform into a magical creature equal to your level or lower from the available options. You lose the use of your abilities, weapons, armor, and domain cards but gain the features and trait bonus of the creature. You can drop out of this form at any time.</p>`,
       },
+    ],
+    backgroundQuestions: [
+      `Why was the community you grew up in so reliant on nature and its creatures?`,
+      `What was the first bond you made with a wild animal? Why did it end?`,
+      `Who has been trying to hunt you down? What do you think they want from you?`,
+    ],
+    connectionQuestions: [
+      `What did you confess to me that makes me leap out into danger for you every time?`,
+      `What animal do I tell you that you remind me of?`,
+      `What affectionate nickname have you given me?`,
     ],
   },
   {
@@ -63,6 +94,14 @@ const classes: IClass[] = [
       minor: 6,
       major: 11,
       severe: 16,
+    },
+    suggestedTraits: {
+      agility: 1,
+      strength: 2,
+      finesse: -1,
+      instinct: 0,
+      presence: 1,
+      knowledge: 0,
     },
     items: ['Stone Totem from Your Mentor', 'Secret Key'],
     features: [
@@ -79,6 +118,16 @@ const classes: IClass[] = [
           <p>At Level 7, upgrade it to a d8.</p>`,
       },
     ],
+    backgroundQuestions: [
+      `Who from your community did you fail to protect, and why do you still think of them?`,
+      `You’ve recently been tasked with protecting something important, with the goal of delivering it somewhere dangerous. What is it and where does it need to go?`,
+      `You’ve always felt uncomfortable in your skin. What are you self-conscious of?`,
+    ],
+    connectionQuestions: [
+      `How did I save your life the first time we met?`,
+      `What small gift did you give me that you notice I still carry with me?`,
+      `What lie have you told me about yourself that I absolutely believe?`,
+    ],
   },
   {
     id: 'ranger',
@@ -90,6 +139,14 @@ const classes: IClass[] = [
       minor: 4,
       major: 9,
       severe: 14,
+    },
+    suggestedTraits: {
+      agility: 2,
+      strength: 0,
+      finesse: 1,
+      instinct: 1,
+      presence: -1,
+      knowledge: 0,
     },
     items: ['Trophy From Your First Kill', 'Seemingly Broken Compass'],
     features: [
@@ -105,6 +162,16 @@ const classes: IClass[] = [
           <p>You may only hold Ranger’s Focus on one creature at a time.</p>`,
       },
     ],
+    backgroundQuestions: [
+      `A terrible creature hurt your community, and you’ve vowed to hunt it down. What is it, and what unique trail or sign does it leave behind anywhere it goes?`,
+      `Your first kill almost killed you too. What was it, and what part of you was never the same?`,
+      `You’ve traveled many dangerous lands, but what is the one place you refuse to go?`,
+    ],
+    connectionQuestions: [
+      `What friendly competition do we have?`,
+      `Why do you act differently when we’re alone than when others are around?`,
+      `What have you asked me to keep an eye out for, and why are you worried about it?`,
+    ],
   },
   {
     id: 'rogue',
@@ -117,6 +184,14 @@ const classes: IClass[] = [
       major: 9,
       severe: 14,
     },
+    suggestedTraits: {
+      agility: 1,
+      strength: -1,
+      finesse: 2,
+      instinct: 0,
+      presence: 1,
+      knowledge: 0,
+    },
     items: ['Forgery Tools', 'Grappling Hook'],
     features: [
       {
@@ -127,6 +202,16 @@ const classes: IClass[] = [
         name: 'Sneak Attack',
         description: `<p>If you have advantage on an attack roll, or an ally is in melee with your target, always add a d8 to your damage roll. When you use Sneak Attack, you may also spend any number of Hope before the attack roll, and if it is successful, also add a number of d8 equal to the Hope spent.</p>`,
       },
+    ],
+    backgroundQuestions: [
+      `What did you get caught doing that had you exiled from your home community?`,
+      `You used to have a different life from this one that you’ve tried to leave behind you. Who from that life is still chasing you?`,
+      `Who from that other life you were most sad to say goodbye to?`,
+    ],
+    connectionQuestions: [
+      `What did I recently convince you to do that got us both in trouble?`,
+      `What have I discovered about your past that I hold secret from the others?`,
+      `Who from that other life you were most sad to say goodbye to?`,
     ],
   },
   {
@@ -140,12 +225,30 @@ const classes: IClass[] = [
       major: 10,
       severe: 15,
     },
+    suggestedTraits: {
+      agility: 0,
+      strength: 2,
+      finesse: 0,
+      instinct: 1,
+      presence: 1,
+      knowledge: -1,
+    },
     items: ['Bundle of Offerings', 'Sigil of Your God'],
     features: [
       {
         name: 'Prayer Dice',
         description: `<p>At the beginning of a session, roll a number of d4 dice equal to your Spellcast trait and store them to the right. You can exhaust them at any time to use their value in reducing incoming damage, adding to a roll result, or exchanging for that many Hope you may give to any player. Clear these dice at the end of a session.</p>`,
       },
+    ],
+    backgroundQuestions: [
+      `Who is the God you have devoted yourself to, and what incredible feat did they perform for you in a moment of desperation that made you indebted to them?`,
+      `How did your own appearance change after taking your oath?`,
+      `In what strange or unique way do you communicate with your God?`,
+    ],
+    connectionQuestions: [
+      `What promise did you make me agree to, should you die on the battlefield?`,
+      `Why do you ask me so many questions about my god?`,
+      `Who have you told me is more important to save here than yourself?`,
     ],
   },
   {
@@ -158,6 +261,14 @@ const classes: IClass[] = [
       minor: 3,
       major: 8,
       severe: 13,
+    },
+    suggestedTraits: {
+      agility: 0,
+      strength: -1,
+      finesse: 1,
+      instinct: 2,
+      presence: 1,
+      knowledge: 0,
     },
     items: ['Whispering Orb', 'Family Heirloom'],
     features: [
@@ -176,6 +287,16 @@ const classes: IClass[] = [
         <li>Add magic damage equal to twice the level of the card to a spell you’ve successfully cast.</li></ul>`,
       },
     ],
+    backgroundQuestions: [
+      `What did you do that make the people in your community wary of you?`,
+      `Who finally taught you how to control the magic bursting forth from you, and why are they no longer able to guide you?`,
+      `You have a true fear you hide from everyone. What is it, and why does it scare you?`,
+    ],
+    connectionQuestions: [
+      `Why do you trust me so deeply?`,
+      `What did I do that makes you wary of me?`,
+      `Why do we keep our shared past a secret?`,
+    ],
   },
   {
     id: 'warrior',
@@ -188,6 +309,14 @@ const classes: IClass[] = [
       major: 10,
       severe: 15,
     },
+    suggestedTraits: {
+      agility: 2,
+      strength: 1,
+      finesse: 0,
+      instinct: 1,
+      presence: -1,
+      knowledge: 0,
+    },
     items: ['Drawing of a Lover', 'Sharpening Stone'],
     features: [
       {
@@ -198,6 +327,16 @@ const classes: IClass[] = [
         name: 'Combat Training',
         description: `<p>Ignore burden when equipping weapons, and you may place primary weapons in your secondary weapon slot. Always add additional physical damage equal to the value of your Level when you attack.</p>`,
       },
+    ],
+    backgroundQuestions: [
+      `Who taught you to fight, and why did they stay behind when you left home?`,
+      `Somebody defeated you in battle years ago and left you to die. Who was it, and why did it feel like such a betrayal?`,
+      `What legendary place have you always wanted to visit, and why is it so special?`,
+    ],
+    connectionQuestions: [
+      `How did we know each other long before this party came together?`,
+      `What mundane thing off the battlefield do you usually help me with?`,
+      `What fear am I helping you to overcome?`,
     ],
   },
   {
@@ -211,6 +350,14 @@ const classes: IClass[] = [
       major: 7,
       severe: 12,
     },
+    suggestedTraits: {
+      agility: -1,
+      strength: 0,
+      finesse: 0,
+      instinct: 1,
+      presence: 1,
+      knowledge: 2,
+    },
     items: ['Book You’re Trying to Translate', 'Tiny & Harmless Elemental Pet'],
     features: [
       {
@@ -222,10 +369,24 @@ const classes: IClass[] = [
         description: `<p>Choose a number between 1-12. Anytime you roll that number on a Duality Die, gain a hope or clear a stress. You may change this number on any long rest.</p>`,
       },
     ],
+    backgroundQuestions: [
+      `What did your community used to count on you for? How did you let them down?`,
+      `You’ve spent your life searching for an object or book of great significance. What is it and why is it so important to you?`,
+      `You have a powerful rival. Who are they, and why are you so determined to be their end?`,
+    ],
+    connectionQuestions: [
+      `What favor have I asked of you that you’re not sure you can fulfill?`,
+      `What weird hobby or strange fascination do we both share?`,
+      `What secret about yourself have you trusted only me with?`,
+    ],
   },
 ];
 
-export const getClass = (classId: string): IBuiltClass => {
+export const getClass = (classId: string): IClass => {
+  return ensure(classes.find((item) => item.id === classId));
+};
+
+export const buildClass = (classId: string): IBuiltClass => {
   const match = ensure(classes.find((item) => item.id === classId));
   const subclasses = getSubclasses(classId);
   const domains = getDomains(match!.domainIds);

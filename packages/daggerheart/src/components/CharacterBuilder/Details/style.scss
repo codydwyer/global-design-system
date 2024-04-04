@@ -1,0 +1,50 @@
+.details-panel {
+  height: calc(100% - 108px);
+  margin-top: 84px;
+  padding: 12px;
+  width: 720px;
+  position: relative;
+  background-color: #f8f8f8;
+  @include basic-shadow;
+
+  &.class-details-panel {
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .traits {
+    position: absolute;
+    top: -72px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+    .trait {
+      text-align: center;
+      width: 84px;
+      position: relative;
+
+      .title {
+        padding: 2px 6px;
+        font-size: 0.9em;
+        background-color: #fff;
+        z-index: 2;
+        position: relative;
+        top: 2px;
+        @include light-shadow;
+      }
+
+      .modifier {
+        display: inline-block;
+        width: 42px;
+        border-radius: 0px 0px 6px 6px;
+        background-color: #fff;
+        padding: 8px;
+        font-size: 1.7em;
+        z-index: 1;
+        @include light-shadow;
+      }
+    }
+  }
+}

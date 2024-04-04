@@ -9,10 +9,13 @@ export interface IDomain {
 }
 
 export interface IDomainCard {
+  id: string;
   name: string;
   domainId: string;
+  domain?: IDomain;
   level: number;
   recallCost: number;
   type: string;
-  effect: TEffect | TEffect[];
+  effects: TEffect[];
+  active?: boolean;
 }

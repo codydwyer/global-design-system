@@ -1,0 +1,38 @@
+.traits-panel {
+  .recommended-traits,
+  .selected-traits {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+    margin-bottom: 18px;
+
+    .trait {
+      span {
+        display: block;
+        text-align: center;
+        width: 80px;
+      }
+    }
+  }
+
+  .trait-selector {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+    margin-bottom: 18px;
+
+    .trait {
+      span {
+        display: block;
+        text-align: center;
+        width: 120px;
+      }
+
+      .trait-select {
+        width: 100%;
+      }
+    }
+  }
+}

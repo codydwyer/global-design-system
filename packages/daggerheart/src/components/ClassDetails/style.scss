@@ -1,0 +1,32 @@
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #bbb;
+  background-color: #bbb;
+  border: none;
+  height: 1px;
+}
+
+.class-highlights {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 12px;
+
+  div {
+    width: 33%;
+    text-align: center;
+  }
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+
+  .subclass-section {
+    width: 50%;
+    h4 {
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
+  }
+}

@@ -1,21 +1,24 @@
-import { useContext } from 'react';
-import { clsx } from 'clsx';
-import TabsContext from '@global-design-system/react-components/dist/components/Tabs/Context/';
-
-import ThemeContext from '../../context/theme';
-import DefaultLayout from '../../layouts/DefaultLayout';
-
-import './style.scss';
-import schema from './schema';
+import { useParams } from 'react-router-dom';
+import { Content } from '@global-design-system/react-components';
+import DefaultLayout from '~/layouts/DefaultLayout';
+import { useAppSelector, useAppDispatch } from '~/hooks';
+import { DetailProvider } from '~/context';
+import { selectCharacterById, selectCharacter } from '~/ducks/characters';
+import CharacterSheet from '~/components/CharacterSheet';
 
 const CharacterTemplate = () => {
-  const { theme } = useContext(ThemeContext);
-  const classes = clsx(theme, 'main');
+  const dispatch = useAppDispatch();
+  const { characterId } = useParams();
+  const character = useAppSelector((state) => selectCharacterById(state, characterId!));
+  dispatch(selectCharacter(character!));
 
   return (
     <DefaultLayout>
-      <div className={classes}></div>
-      <TabsContext {...schema} />
+      <DetailProvider>
+        <Content>
+          <CharacterSheet character={character!} />
+        </Content>
+      </DetailProvider>
     </DefaultLayout>
   );
 };

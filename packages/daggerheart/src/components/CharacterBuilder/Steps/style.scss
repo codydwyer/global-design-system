@@ -1,0 +1,47 @@
+.steps-panel {
+  height: calc(100% - 108px);
+  height: calc(100% - 108px);
+  height: calc(100% - 108px);
+  margin-top: 84px;
+  padding: 12px;
+  width: 240px;
+  position: relative;
+  background-color: #f8f8f8;
+  @include basic-shadow;
+
+  .view-btn {
+    position: absolute;
+    top: -30px;
+  }
+
+  .builder-step-btn {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.333);
+    text-align: left;
+
+    .step-title {
+      display: block;
+    }
+    .step-subtitle {
+      display: block;
+      height: 12px;
+      font-size: 0.8em;
+    }
+
+    &:not([disabled]):hover {
+      position: relative;
+      top: 1px;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    &:not([disabled]):active {
+      position: relative;
+      top: 2px;
+      box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.333);
+    }
+  }
+}

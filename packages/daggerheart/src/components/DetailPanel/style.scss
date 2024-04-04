@@ -1,0 +1,106 @@
+.detail-context-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+
+  .main-content {
+    flex-grow: 1;
+  }
+
+  .detail-panel {
+    display: none;
+
+    &.showing {
+      display: flex;
+      width: 40%;
+      margin: 12px;
+      padding: 0;
+      flex-flow: column;
+      overflow: hidden;
+      position: relative;
+      height: calc(100% - 24px);
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.333);
+
+      &:after {
+        content: '';
+        display: block;
+        height: 50px;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 1;
+        background: linear-gradient(0deg, #fff 16px, transparent);
+        margin: 0;
+        padding: 0;
+      }
+
+      .detail-panel-overlay {
+        display: flex;
+        width: 100%;
+        margin: 0px;
+        flex-flow: row;
+        position: relative;
+        overflow-y: scroll;
+        height: 100%;
+
+        &::-webkit-scrollbar {
+          display: block;
+          width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+          padding-top: 42px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #ccc;
+        }
+      }
+
+      .detail-panel-content {
+        position: absolute;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: wrap;
+        width: calc(100% - 12px);
+        max-width: 100%;
+        margin: 0px;
+        flex-basis: 100%;
+        z-index: 1;
+        padding: 12px 12px 48px 12px;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin-bottom: 6px;
+
+          & + p {
+            margin-top: 6px;
+          }
+        }
+
+        p:first-child {
+          margin-top: 0px;
+        }
+      }
+    }
+
+    .close-detail-panel-btn {
+      border: none;
+      background: none;
+      font-size: 1.25em;
+      position: fixed;
+      top: 90px;
+      right: 20px;
+      z-index: 10;
+    }
+  }
+}

@@ -1,9 +1,11 @@
 .tabs {
   width: 100%;
   padding-top: 6px;
-  padding-left: 6px;
-  box-shadow: inset 0px 0px 24px rgba(0, 0, 0, 0.35);
+  //box-shadow: inset 0px 0px 24px rgba(0, 0, 0, 0.333);
   border-bottom: 1px solid #bbb;
+
+  display: flex;
+  justify-content: center;
 
   .tab {
     display: inline-block;

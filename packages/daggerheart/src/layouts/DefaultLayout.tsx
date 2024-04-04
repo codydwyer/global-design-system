@@ -10,15 +10,15 @@ const schema: ILink[] = [
     to: '',
     text: 'Characters',
     subnav: [
-      { to: '', text: 'My characters' },
-      { to: '', text: 'Create a new Character', element: <Link to={'/character'}>Create a new character</Link> },
+      { to: '', text: 'My characters', element: <Link to={'/characters'}>My characters</Link> },
+      { to: '', text: 'Create a new Character', element: <Link to={'/builder'}>Create a new character</Link> },
     ],
   },
   {
     to: '',
     text: 'Rules',
     subnav: [
-      { to: '', text: 'Classes' },
+      { to: '/editor', text: 'Classes' },
       { to: '', text: 'Heritages' },
       { to: '', text: 'Domains', element: <Link to={'/domains'}>Domains</Link> },
       { to: '', text: 'Items' },

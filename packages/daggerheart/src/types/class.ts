@@ -1,4 +1,5 @@
-import { IFeature } from './feature';
+import { IDomain, ISubclass, IFeature, TTraits } from '.';
+
 export interface IThresholds {
   minor: number;
   major: number;
@@ -14,4 +15,12 @@ export interface IClass {
   thresholds: IThresholds;
   items: string[];
   features: IFeature[];
+  backgroundQuestions: string[];
+  connectionQuestions: string[];
+  suggestedTraits: TTraits;
+}
+
+export interface IBuiltClass extends IClass {
+  domains: IDomain[];
+  subclasses: ISubclass[];
 }

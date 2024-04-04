@@ -1,7 +1,7 @@
 import { TTrait } from './trait';
 import { IFeature } from './feature';
 
-export type TSubclassFeature = string | IFeature;
+export type TSubclassFeature = React.ReactNode | IFeature;
 
 export interface ISubclassFeatures {
   foundation: TSubclassFeature[];

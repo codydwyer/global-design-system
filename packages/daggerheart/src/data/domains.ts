@@ -49,10 +49,12 @@ export const domains: IDomain[] = [
   },
 ];
 
+export const getDomainById = (domainId: string) => {
+  return ensure(domains.find((domain) => domain.id === domainId));
+};
+
 export const getDomains = (domainIds: string[]) => {
-  return domainIds.map((domainId) => {
-    return ensure(domains.find((domain) => domain.id === domainId));
-  });
+  return domainIds.map((domainId) => getDomainById(domainId));
 };
 
 export default domains;

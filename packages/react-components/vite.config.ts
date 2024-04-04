@@ -8,6 +8,13 @@ import { glob } from "glob";
 
 export default defineConfig({
   plugins: [react(), libInjectCss(), dts({ include: ["lib"] })],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "lib/tokens/index.scss";`,
+      },
+    },
+  },
   build: {
     copyPublicDir: false,
     lib: {

@@ -1,6 +1,15 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ThemeProvider } from '~/context';
-import { RootPage, ClassPage, ErrorPage, CharacterPage, DomainsPage } from '../pages';
+import {
+  RootPage,
+  BuilderPage,
+  ClassPage,
+  ErrorPage,
+  EditorPage,
+  CharacterPage,
+  CharacterListPage,
+  DomainsPage,
+} from '../pages';
 
 const router = createBrowserRouter([
   {
@@ -17,12 +26,24 @@ const router = createBrowserRouter([
     element: <ClassPage />,
   },
   {
-    path: 'character/',
-    element: <CharacterPage />,
+    path: 'characters',
+    element: <CharacterListPage />,
   },
   {
     path: 'character/:characterId',
     element: <CharacterPage />,
+  },
+  {
+    path: 'builder/:characterId',
+    element: <BuilderPage />,
+  },
+  {
+    path: 'builder',
+    element: <BuilderPage />,
+  },
+  {
+    path: 'editor',
+    element: <EditorPage />,
   },
   {
     path: 'domains',

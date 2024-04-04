@@ -35,19 +35,16 @@ const subclasses: ISubclass[] = [
     id: 'troubadour',
     name: 'Troubadour',
     classId: 'bard',
-    description: ``,
+    description: `Play the Troubadour if you want to play music to bolster your allies.`,
     spellcastingTrait: 'Presence',
     features: {
       foundation: [
-        {
-          name: ``,
-          description: `<p>When you select this Foundation, describe the instrument you use to produce music. You may perform each song once per long rest:</p>
+        `<p>When you select this Foundation, describe the instrument you use to produce music. You may perform each song once per long rest:</p>
       <ul>
         <li>When you perform a relaxing song during a moment of calm, you and any close allies heal 1 Hit Point.</li>
         <li>When you perform an epic song during battle, make a target temporarily Vulnerable.</li>
         <li>When you perform a heartbreaking song at any time, you and any close allies take a Hope.</li>
       </ul>`,
-        },
       ],
       specialization: [
         `<p>Your rallying songs also help steel the courage of those who listen. Anybody who receives a Rally die from you via your Rally ability can also choose to either gain a Hope or clear a Stress.</p>`,
@@ -61,7 +58,7 @@ const subclasses: ISubclass[] = [
     id: 'warden-of-the-elements',
     name: 'Warden of the Elements',
     classId: 'druid',
-    description: ``,
+    description: `Play the Warden of the Elements if you want to embody the natural elements of nature.`,
     spellcastingTrait: 'Instinct',
     features: {
       foundation: [

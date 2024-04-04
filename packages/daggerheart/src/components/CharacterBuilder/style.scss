@@ -1,0 +1,19 @@
+.character-builder {
+  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  background: linear-gradient(0deg, #281b41 0%, #202b2f 50%, #2c4146 100%);
+  background: #efefef;
+  overflow: hidden;
+
+  .panel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    height: calc(100% - 30px);
+    max-height: calc(100% - 30px);
+    min-height: calc(100% - 30px);
+    width: 100%;
+  }
+}
