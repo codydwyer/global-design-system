@@ -2,9 +2,8 @@ import { useContext } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { clsx } from 'clsx';
-import { v4 as uuid } from 'uuid';
 import { Content } from '@global-design-system/react-components';
-
+import { generateId } from '~/utils';
 import { selectCharacters, createCharacter, deleteCharacter } from '~/ducks/characters';
 
 import ThemeContext from '../../context/theme';
@@ -51,7 +50,7 @@ const CharacterListTemplate = () => {
   const characters = useSelector(selectCharacters);
   const newHandler = () => {
     const character = {
-      id: uuid(),
+      id: generateId(),
     };
     dispatch(createCharacter(character));
     navigate(`/builder/${character.id}`);

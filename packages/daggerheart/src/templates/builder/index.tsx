@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { v4 as uuid } from 'uuid';
+import { generateId } from '~/utils';
 
 import DefaultLayout from '~/layouts/DefaultLayout';
 import { useAppSelector, useAppDispatch } from '~/hooks';
@@ -16,7 +16,7 @@ const BuilderTemplate = () => {
 
   const navigationHandler = () => {
     const character = {
-      id: uuid(),
+      id: generateId(),
     };
     dispatch(createCharacter(character));
     navigate(`/builder/${character.id}`);
