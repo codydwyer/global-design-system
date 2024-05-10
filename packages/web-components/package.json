@@ -1,9 +1,0 @@
-{
-  "name": "@global-design-system/web-components",
-  "version": "0.0.1",
-  "description": "Web components built off of the Global Design System core",
-  "main": "index.js",
-  "repository": "https://github.com/codydwyer/global-design-system.git",
-  "author": "Cody Dwyer <codydwyer@gmail.com>",
-  "license": "MIT"
-}
