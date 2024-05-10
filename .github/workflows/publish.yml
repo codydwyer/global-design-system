@@ -15,4 +15,4 @@ jobs:
         with:
           node-version: "20.x"
           registry-url: "https://registry.npmjs.org:_authToken=${{secrets.NPM_TOKEN}}"
-      - run: npm ci
+      - run: yarn workspaces foreach --no-private npm publish
